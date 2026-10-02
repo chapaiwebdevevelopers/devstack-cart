@@ -23,7 +23,7 @@ const Cards = ({ products }: cardsProps) => {
 
       {/* Cart */}
       <div className="lg:col-span-1 sticky top-4 h-fit max-h-[calc(100vh-2rem)] overflow-y-auto">
-        <CartCard selectProduct ={selectProduct}/>
+        <CartCard selectProduct ={selectProduct} setSelectedProduct={setSelectedProduct}/>
       </div>
 
     </div>

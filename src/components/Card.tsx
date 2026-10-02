@@ -1,6 +1,7 @@
 import React, { useState, type Dispatch, type SetStateAction } from "react";
 import type { productType } from "../types/types";
 import { FaStar } from "react-icons/fa";
+import { toast, ToastContainer } from "react-toastify";
 
 interface iCard{
      product: productType,
@@ -12,6 +13,8 @@ const Card = ({ product,selectProduct,setSelectedProduct }: iCard) => {
    const handleSelectedProduct=()=>{
         setIsAdded(true)
         setSelectedProduct([...selectProduct,product]);
+        toast.success('Added Succesfully')
+       
    }
    
 
@@ -70,6 +73,7 @@ const Card = ({ product,selectProduct,setSelectedProduct }: iCard) => {
           <div className="mt-4">
             <button onClick={()=>handleSelectedProduct()} className={`btn btn-primary btn-block btn-${isAdded ?"disabled":''}`}  >
                 {isAdded ? '✓ Added to Stack':'Add to Stack'}
+                
             </button>
           </div>
 
