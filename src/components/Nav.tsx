@@ -2,7 +2,7 @@
 import Logo from '../assets/logo-text.png'
 const Nav = () => {
     return (
-        <div className="navbar   container mx-auto">
+        <div className="navbar sticky top-0  container mx-auto bg-white z-9">
             {/* Navbar stays sticky at the top while scrolling. */}
   <div className="navbar-start">
     <div className="dropdown">
@@ -12,7 +12,7 @@ const Nav = () => {
       <ul
         tabIndex={-1}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>HOme</a></li>
+        <li><a>Home</a></li>
         <li><a>Technologies</a></li>
         <li><a>Projects</a></li>
         <li><a>About</a></li>
