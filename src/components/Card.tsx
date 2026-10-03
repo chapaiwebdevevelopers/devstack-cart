@@ -9,7 +9,9 @@ interface iCard{
     setSelectedProduct: Dispatch<SetStateAction<productType[]>>;
      }
 const Card = ({ product,selectProduct,setSelectedProduct }: iCard) => {
+
     const [isAdded,setIsAdded] = useState(false)
+    console.log(selectProduct)
    const handleSelectedProduct=()=>{
         setIsAdded(true)
         setSelectedProduct([...selectProduct,product]);

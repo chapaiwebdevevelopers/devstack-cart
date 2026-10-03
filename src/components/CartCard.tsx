@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 interface iCartCard{ 
     selectProduct: productType[],
     setSelectedProduct: Dispatch<SetStateAction<productType[]>>;
+    setIsAdded: Dispatch<SetStateAction<boolean>>,
 
  }
 
@@ -14,6 +15,7 @@ const CartCard = ({ selectProduct,setSelectedProduct }: iCartCard) => {
             const restProduct = selectProduct.filter(item => item.id !== productId);
             setSelectedProduct(restProduct);
             toast.warn('Item Removed')
+            
     }
     const handleRemoveAll = ()=>{
         setSelectedProduct([])
