@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Hero from './components/Hero'
 import Nav from './components/Nav'
 import Tech from './components/Tech';
+import Footer from './components/Footer';
+// import Footer from '/compenents/Footer'
 
 
 const dataFetch = async()=>{
@@ -24,8 +26,9 @@ function App() {
         <Nav></Nav>
         <Hero></Hero>
         <Tech productsPromise={productsPromise}></Tech>
-
       </div>
+      <Footer></Footer>
+      
 
     </>
   )
