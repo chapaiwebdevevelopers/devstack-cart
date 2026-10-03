@@ -1,7 +1,7 @@
-import React, { useState, type Dispatch, type SetStateAction } from "react";
+import  { useState, type Dispatch, type SetStateAction } from "react";
 import type { productType } from "../types/types";
 import { FaStar } from "react-icons/fa";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 interface iCard{
      product: productType,
@@ -11,11 +11,11 @@ interface iCard{
 const Card = ({ product,selectProduct,setSelectedProduct }: iCard) => {
 
     const [isAdded,setIsAdded] = useState(false)
-    console.log(selectProduct)
+    // console.log(selectProduct)
    const handleSelectedProduct=()=>{
         setIsAdded(true)
         setSelectedProduct([...selectProduct,product]);
-        toast.success('Added Succesfully')
+        toast.success('Added Successfully')
        
    }
    

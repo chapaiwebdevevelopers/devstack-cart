@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import { use } from 'react';
 import type { productType } from '../types/types';
 import Cards from './Cards';
 
@@ -14,7 +14,7 @@ const Tech = ({productsPromise}:productsProps) => {
             <div className='space-y-3 mb-6'>
                 <h2 className='text-2xl sm:text-3xl font-semibold'>
                     Explore the{' '}
-                    <span className='bg-gradient-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent'>
+                    <span className='bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent'>
                         Technologies
                     </span>
                 </h2>

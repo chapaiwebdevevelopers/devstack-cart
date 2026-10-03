@@ -1,10 +1,9 @@
 
-import { Suspense, useState } from 'react';
+import { Suspense } from 'react';
 import Hero from './components/Hero'
 import Nav from './components/Nav'
 import Tech from './components/Tech';
 import Footer from './components/Footer';
-// import Footer from '/compenents/Footer'
 
 
 const dataFetch = async()=>{

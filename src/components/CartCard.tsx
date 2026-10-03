@@ -1,16 +1,16 @@
-import React, { type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 import type { productType } from "../types/types";
 import { RxCross1 } from "react-icons/rx";
 import { toast } from "react-toastify";
 interface iCartCard{ 
     selectProduct: productType[],
     setSelectedProduct: Dispatch<SetStateAction<productType[]>>;
-    setIsAdded: Dispatch<SetStateAction<boolean>>,
+  
 
  }
 
 const CartCard = ({ selectProduct,setSelectedProduct }: iCartCard) => {
-    console.log(selectProduct)
+//     console.log(selectProduct)
     const handleRemoveProduct = (productId: string) => {
             const restProduct = selectProduct.filter(item => item.id !== productId);
             setSelectedProduct(restProduct);
@@ -29,7 +29,7 @@ const CartCard = ({ selectProduct,setSelectedProduct }: iCartCard) => {
                             selectProduct.length === 0 ? <p>No technologies selected yet.</p> : <p>{  selectProduct.length} Technology Selected</p>
                         }
                         {/* <p>{  selectProduct.length} Technology Selected</p> */}
-                        {selectProduct.map((product, index) => (
+                        {selectProduct.map((product) => (
                               // <p key={index}>{product.id}</p>
                               <div key={product.id} className="flex ss justify-between p-3 border border-gray-200 items-center my-3">
                                     <div className="flex space-x-5">
