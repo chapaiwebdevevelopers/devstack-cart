@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import Hero from './components/Hero'
 import Nav from './components/Nav'
 import Tech from './components/Tech';
@@ -21,11 +21,14 @@ function App() {
 
   return (
     <>
-
+  
       <div className="container mx-auto">
         <Nav></Nav>
         <Hero></Hero>
-        <Tech productsPromise={productsPromise}></Tech>
+        <Suspense fallback='<p> Loading... Wait few second</p>'>
+                <Tech productsPromise={productsPromise}></Tech>
+        </Suspense>
+
       </div>
       <Footer></Footer>
       

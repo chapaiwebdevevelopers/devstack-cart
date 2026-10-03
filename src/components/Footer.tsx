@@ -23,7 +23,7 @@ const Footer = () => {
 
         {/* Services */}
         <nav>
-          <h6 className="footer-title">Services</h6>
+          <h6 className="footer-title">Product</h6>
 
           <a href="#" className="link link-hover">
             Branding
